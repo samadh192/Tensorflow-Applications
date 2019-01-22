@@ -11,7 +11,7 @@ plt.rcParams['figure.figsize'] = (10, 6)
 !wget -O FuelConsumption.csv https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/FuelConsumptionCo2.csv
 
 df = pd.read_csv("FuelConsumption.csv")
-print(df.head())
+#print(df.head())
 train_x = np.asanyarray(df[['ENGINESIZE']])
 train_y = np.asanyarray(df[['CO2EMISSIONS']])
 
@@ -33,7 +33,7 @@ for step in range(100):
     _, loss_val, a_val, b_val = sess.run([train, loss, a, b])
     loss_values.append(loss_val)
     if step % 5 == 0:
-        print(step, loss_val, a_val, b_val)
+        #print(step, loss_val, a_val, b_val)
         train_data.append([a_val, b_val])
 engine_size=np.float32(input("Enter engine size:"))
 co2_emission=a_val*engine_size+b_val;
