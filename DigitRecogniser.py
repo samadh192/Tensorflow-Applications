@@ -23,4 +23,4 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 model.fit(x_train, y_train, epochs=10, callbacks=[callbacks])
-model.evaluate(x_test,x_train)
+model.evaluate(x_test,y_test)
